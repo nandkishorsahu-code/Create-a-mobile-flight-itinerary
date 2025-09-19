@@ -1,0 +1,71 @@
+👉 A UI-only Android proof of concept for the Flightscry app, built in Android Studio with Backpack components, then pushed to a public GitHub repo.
+
+Here’s what you need to do step by step:
+
+✅ Steps to Complete the Task
+
+Install Android Studio (Electric Eel or newer to avoid Backpack rendering bugs).
+
+Create a New Project
+
+Template: Empty Activity
+
+Language: Kotlin
+
+Min SDK: API 33 (Tiramisu)
+
+Run Your App Once to verify the emulator works.
+
+Add Backpack Dependency In app/build.gradle:
+
+dependencies { implementation 'net.skyscanner.backpack:backpack-android:43.0.0' }
+
+Sync Gradle.
+
+Build the UI in res/layout/activity_main.xml:
+
+A Flight Info Card (with flight number).
+
+A Departure Card (with 3-digit airport code + departure time).
+
+An Arrival Card (with 3-digit airport code + arrival time).
+
+Use BpkCardView and BpkText components styled with Backpack.
+
+Example snippet for one card:
+
+<net.skyscanner.backpack.card.BpkCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cornerStyle="large">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <net.skyscanner.backpack.text.BpkText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flight BA123"
+        style="@style/bpkTextHeading1"/>
+</LinearLayout>
+</net.skyscanner.backpack.card.BpkCardView>
+
+Test on Emulator Run the app, ensure cards display dummy data properly.
+
+Push to GitHub
+
+Initialize git:
+
+git init git add . git commit -m "Flightscry UI PoC with Backpack"
+
+Create a new repo at https://github.com/new .
+
+Link and push:
+
+git remote add origin https://github.com/<username>/flightscry-poc.git git branch -M main git push -u origin main
+
+Submit Repo Link Example format:
+
+https://github.com/ nandkishorsahu-code/flightscry-poc
+
+👉 Do you want me to write a polished README.md template for your Flightscry repo (with setup instructions, screenshots section, and task description), so your submission looks professional?
